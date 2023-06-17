@@ -3,6 +3,8 @@
     <v-app-bar
       :color="theme === 'light' ? 'white ': '#121212'"
       :elevation="elevation"
+      scroll-behavior="elevate"
+      :scroll-threshold="20"
     >
       <template #prepend>
         <v-btn
@@ -12,7 +14,8 @@
       </template>
 
       <v-app-bar-title class="mt-n1">
-        <strong>{{ currentPage.toUpperCase() }} </strong> - APP
+        <!-- <strong>{{ currentPage.toUpperCase() }} </strong> - APP -->
+        <strong>INGENIERÍA CUNOC</strong>
       </v-app-bar-title>
     </v-app-bar>
 
@@ -25,7 +28,26 @@
       />
     </v-navigation-drawer>
 
-    <v-main>
+    <v-main class="main-container">
+      <!-- back button inside a v-app-bar for convenience -->
+      <v-app-bar
+        :color="theme === 'light' ? 'white ': '#121212'"
+        elevation="0"
+        density="compact"
+        class="title-bar"
+        :scroll-behavior="'elevate'"
+        :scroll-threshold="20"
+      >
+        <template #prepend>
+          <v-btn
+            icon="mdi-arrow-left"
+            @click="$router.go(-1)"
+          />
+        </template>
+        <v-app-bar-title class="page-title">
+          <strong>{{ currentPage.toUpperCase() }} </strong>
+        </v-app-bar-title>
+      </v-app-bar>
       <NuxtPage
         :theme="theme"
         class="ma-4"

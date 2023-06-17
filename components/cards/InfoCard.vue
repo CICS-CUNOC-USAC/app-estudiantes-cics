@@ -6,7 +6,7 @@
       :elevation="isHovering ? 6 : 2"
       rounded="lg"
     >
-      <v-img 
+      <v-img
         height="150"
         :src="img"
         cover
@@ -19,7 +19,7 @@
           >
             <p class="card-subtitle">
               {{ subtitle }}
-            </p>  
+            </p>
           </v-card-subtitle>
           <v-card-title
             class="text-orange-accent-4"
@@ -30,7 +30,7 @@
             </p>
           </v-card-title>
         </v-card-item>
-  
+
         <v-card-text align="left">
           <p class="card-description">
             {{ description }}
