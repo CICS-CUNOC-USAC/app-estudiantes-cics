@@ -1,12 +1,8 @@
 <template>
   <NuxtLayout />
 </template>
-<script>
-export default {
-  setup () {
-    useHead({
-      title: 'CUNOC - Aplicación para estudiantes'
-    })
-  }
-}
+<script setup lang="ts">
+useHead({
+  titleTemplate: title => (title ? `${title} | CUNOC App` : 'CUNOC - Aplicación para estudiantes')
+})
 </script>

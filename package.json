@@ -9,11 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.7.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "eslint": "^8.37.0",
-    "nuxt": "^3.3.2",
+    "nuxt": "^3.6.2",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
     "typescript": "^5.0.3"
@@ -21,6 +22,7 @@
   "dependencies": {
     "@mdi/font": "^7.2.96",
     "@pinia/nuxt": "^0.4.7",
+    "consola": "3.0.1",
     "pinia": "^2.0.33",
     "vite-plugin-vuetify": "^1.0.2",
     "vuetify": "^3.1.4"

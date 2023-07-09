@@ -7,7 +7,12 @@ import InConstruction from '~/components/extras/in-construction.vue'
 
 export default {
   name: 'Aeio',
-  components: { InConstruction }
+  components: { InConstruction },
+  setup () {
+    useHead({
+      title: 'Asociación : AEIO'
+    })
+  }
 }
 </script>
 

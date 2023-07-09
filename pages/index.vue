@@ -141,11 +141,18 @@
 <script lang="ts">
 export default {
   props: ['theme'],
+  setup () {
+    useHead({
+      title: 'Inicio'
+    })
+  },
   data () {
     return {
       sections: {
         basicInfo: [
           {
+            title: 'Horarios de Semestre',
+            subtitle: 'Para organizarte',
             title: 'Horarios de Semestre',
             subtitle: 'Para organizarte',
             description:
