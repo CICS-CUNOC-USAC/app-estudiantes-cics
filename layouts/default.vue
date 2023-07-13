@@ -2,7 +2,7 @@
   <v-app :theme="theme">
     <v-app-bar
       :color="theme === 'light' ? 'white ': '#121212'"
-      :elevation="elevation"
+      scroll-behavior="elevate"
     >
       <template #prepend>
         <v-btn
@@ -19,6 +19,7 @@
     <v-navigation-drawer
       v-model="drawer"
       :width="$vuetify.display.mdAndUp ? 340 : 300"
+      border="0"
     >
       <SidebarNavigator
         @theme="(theme: string) => changeTheme(theme)"
@@ -26,13 +27,10 @@
     </v-navigation-drawer>
 
     <v-main>
-      <v-container>
-        <NuxtPage
-          :theme="theme"
-          class="ma-4"
-          @current-page="currentPage = $event"
-        />
-      </v-container>
+      <NuxtPage
+        :theme="theme"
+        @current-page="currentPage = $event"
+      />
       <v-footer
         :color="theme === 'light' ? 'white':'#121212'"
         justify="center"

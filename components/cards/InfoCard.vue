@@ -6,7 +6,7 @@
       :elevation="isHovering ? 6 : 2"
       rounded="lg"
     >
-      <v-img 
+      <v-img
         height="150"
         :src="img"
         cover
@@ -19,7 +19,7 @@
           >
             <p class="card-subtitle">
               {{ subtitle }}
-            </p>  
+            </p>
           </v-card-subtitle>
           <v-card-title
             class="text-orange-accent-4"
@@ -30,7 +30,7 @@
             </p>
           </v-card-title>
         </v-card-item>
-  
+
         <v-card-text align="left">
           <p class="card-description">
             {{ description }}
@@ -45,19 +45,23 @@ export default {
   props: {
     img: {
       type: String,
-      required: true
+      required: true,
+      default: ''
     },
     subtitle: {
       type: String,
-      required: false
+      required: false,
+      default: ''
     },
     title: {
       type: String,
-      required: true
+      required: true,
+      default: ''
     },
     description: {
       type: String,
-      required: false
+      required: false,
+      default: ''
     },
     route: {
       type: String,
@@ -69,7 +73,8 @@ export default {
 <style lang="scss">
   .card-title {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 4px;
   }
   .card-subtitle {
     font-weight: 400;

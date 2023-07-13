@@ -1,7 +1,5 @@
 <template>
   <v-container>
-    <v-img max-width="450" alt="Logo CICS" :src="getLogo()" />
-
     <div class="greetings">
       <h1>Aplicación para Estudiantes</h1>
       <v-divider thickness="3" />
@@ -140,7 +138,12 @@
 </template>
 <script lang="ts">
 export default {
-  props: ['theme'],
+  props: {
+    theme: {
+      type: String,
+      default: 'light'
+    }
+  },
   setup () {
     useHead({
       title: 'Inicio'
@@ -151,8 +154,6 @@ export default {
       sections: {
         basicInfo: [
           {
-            title: 'Horarios de Semestre',
-            subtitle: 'Para organizarte',
             title: 'Horarios de Semestre',
             subtitle: 'Para organizarte',
             description:
@@ -241,10 +242,8 @@ export default {
       }
     }
   },
-  head () {
-    return {
-      title: 'Home'
-    }
+  created () {
+    this.$emit('currentPage', 'Inicio')
   },
   methods: {
     getLogo () {
